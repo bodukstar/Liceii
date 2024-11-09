@@ -1,0 +1,234 @@
+/* Основний стиль сторінки */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+    margin: 10px;
+    padding: 0;
+    line-height: 1.6;
+    margin-bottom: 60px;
+}
+
+/* Стиль заголовків */
+h1, h2, h3, h4, h5, h6 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+/* Стиль для навігаційного меню */
+#navigation {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#navigation ul li {
+    display: inline;
+}
+
+#navigation ul li a {
+    color: #0056b3;
+    padding: 0 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#navigation ul li a:hover {
+    color: #ff6600;
+}
+
+/* Стиль для блоків записів */
+.projects .item {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.projects .item:hover {
+    transform: scale(1.02);
+}
+
+/* Кнопки "Нравится" і "Не нравится" */
+.button-like, .button-dislike {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-like:hover, .button-dislike:hover {
+    background-color: #ff4500;
+}
+
+/* Стиль для форми коментарів */
+.form-comment input[type="submit"] {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-comment input[type="submit"]:hover {
+    background-color: #ff4500;
+}
+
+/* Стиль для коментарів */
+.view-comment {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для тексту коментарів */
+.view-comment p {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+
+#footer {
+    background-color: #222;
+    color: #7f7f7f;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+
+#footer a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #ff4500;
+}
+
+.liik a {
+    text-decoration: none;
+}
+
+#dislike {
+    color: #af0b0b;
+}
+
+#like {
+    color: #00a311;
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #navigation ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navigation ul li {
+        margin-bottom: 10px;
+    }
+
+    #main {
+        padding: 10px;
+    }
+
+    .projects .item {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .projects .item img {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .projects .item .text {
+        font-size: 0.9em;
+    }
+
+    .form-comment input[type="submit"] {
+        padding: 8px 15px;
+    }
+
+    .view-comment {
+        padding: 8px 12px;
+    }
+
+    .liik a {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .view-comment p {
+        font-size: 0.85em;
+    }
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .projects .item {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .form-comment textarea {
+        width: 100%;
+        height: 100px;
+    }
+
+    .form-comment input[type="text"],
+    .form-comment input[type="email"] {
+        width: 100%;
+    }
+}

@@ -1,0 +1,63 @@
+{% load static %}
+<html >
+<head>
+   <title>Licei</title>
+   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+   <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/image/favicon-16x16.png">
+    <link rel="manifest" href="../media/image/site.webmanifest">
+
+
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+
+</head>
+<body>
+<div class="shell">
+	<div class="border">
+
+		<div id="navigation">
+			<ul>
+			    <li><a href="/" class="active">Головна</a></li>
+			    <li><a href="/admin">Для NyxC</a></li>
+
+			</ul>
+		</div>
+
+		<div id="main">
+   			<div id="content" class="left">
+
+      			<div class="projects">
+         			<h3>Чорнота</h3>
+         			{% for post in post_list %}
+         			<div class="item">
+            			<div class="image left">
+               				<img src="{{ post.img.url }}"  width="200px"/>
+            			</div>
+						<div class="text left">
+               				<h4><a href="{{ post.id }}">{{ post.title }}</a></h4>
+               				<p>{{ post.description }}</p>
+               				<p>Автор:  {{ post.author }}</p>
+            			</div>
+            			<div class="cl"> </div>
+         			</div>
+          			{% endfor %}
+     			 </div>
+   			</div>
+
+
+			<div class="cl"> </div>
+		</div>
+
+
+	</div>
+
+	<div id="footer">
+		<p class="copy right">by NyxC &copy;  2023 </p>
+	</div>
+</div>
+</body>
+</html>
